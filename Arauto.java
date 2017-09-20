@@ -140,18 +140,26 @@ public class Arauto {
 		String coordenadaDestino = "9000 9000";
 		
 		
-		/*if (args.length > 0) {
+		if (args.length > 0) {
 			try {
 				BufferedReader br = new BufferedReader(new FileReader(args[0]));
 				coordenadaRobo = br.readLine();
 				coordenadaDestino = br.readLine();
+				try{
+					Double.parseDouble(coordenadaRobo);
+				}
+				catch(Exception e){
+					BufferedReader br = new BufferedReader(new FileReader(args[1]));
+				coordenadaRobo = br.readLine();
+				coordenadaDestino = br.readLine();
+				}
 				br.close();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}*/
+		}
 		
 		String[] coordenadasRobo = coordenadaRobo.split(" ");
 		String[] coordenadasDestino = coordenadaDestino.split(" ");
